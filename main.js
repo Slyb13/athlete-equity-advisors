@@ -1,3 +1,9 @@
+// ── HERO IMAGE ZOOM ──────────────────────────────────────────
+const heroBg = document.getElementById('heroBg');
+if (heroBg) {
+  setTimeout(() => heroBg.classList.add('loaded'), 100);
+}
+
 // ── NAVBAR SCROLL ───────────────────────────────────────────
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
