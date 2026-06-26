@@ -439,11 +439,11 @@ ul { list-style: none; }
   z-index: 2;
 }
 .featured-card {
-  background: var(--black);
+  background: var(--white);
   border-bottom-color: var(--green);
 }
-.featured-card h3 { color: var(--white); }
-.featured-card p { color: rgba(255,255,255,0.6); }
+.featured-card h3 { color: var(--black); }
+.featured-card p { color: var(--muted); }
 .featured-card .service-icon { color: var(--green); }
 .featured-card .card-arrow { color: var(--green); }
 
