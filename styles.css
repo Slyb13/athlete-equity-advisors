@@ -1094,3 +1094,48 @@ ul { list-style: none; }
   .form-row { grid-template-columns: 1fr; }
   .container { padding: 0 20px; }
 }
+
+/* ── MOBILE OVERFLOW FIX ─────────────────────────────────── */
+@media (max-width: 768px) {
+  html, body { overflow-x: hidden; }
+
+  /* Force ALL inline grids to single column */
+  .about-section div[style*="grid-template-columns"],
+  .approach-section div[style*="grid-template-columns"] {
+    display: block !important;
+  }
+  .about-section div[style*="grid-template-columns"] > div,
+  .approach-section div[style*="grid-template-columns"] > div {
+    width: 100% !important;
+    margin-bottom: 32px;
+  }
+
+  /* Mission/callout box */
+  .about-section div[style*="padding:60px"],
+  .about-section div[style*="padding: 60px"] {
+    padding: 32px 24px !important;
+  }
+
+  /* Approach step cards */
+  .about-section div[style*="display:flex"][style*="gap:20px"] {
+    flex-wrap: wrap;
+  }
+
+  /* Page sections padding reduction */
+  .about-section { padding: 48px 0 !important; }
+  .page-hero { padding: 52px 0 40px !important; }
+}
+
+/* ── ABOUT APPROACH GRID ─────────────────────────────────── */
+.about-approach-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .about-approach-grid {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+}
